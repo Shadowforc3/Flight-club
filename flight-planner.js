@@ -113,7 +113,7 @@
       if (sideTabs) sideTabs.hidden = false;
       headerAuth.innerHTML =
         '<span class="header-greeting"><strong>' + escapeHtml(state.name) + '</strong>, welcome</span>' +
-        '<a href="torn-travel.html" class="btn btn-ghost">Dashboard</a>' +
+        '<a href="index.html" class="btn btn-ghost">Dashboard</a>' +
         '<button type="button" class="btn btn-ghost" id="logoutBtn">Log out</button>';
       document.getElementById('logoutBtn').addEventListener('click', function(){
         try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(STORAGE_NAME); } catch (e) { /* ignore */ }
