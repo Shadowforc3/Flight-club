@@ -1,7 +1,7 @@
 /* =========================================================================
    Flight Planner
    =========================================================================
-   Only usable once logged in on the main page (torn-travel.html): reads
+   Only usable once logged in on the main page (index.html): reads
    the same tta_api_key / tta_player_name localStorage keys torn-api.js
    writes, and gates all content behind them being present.
 
@@ -117,7 +117,7 @@
         '<button type="button" class="btn btn-ghost" id="logoutBtn">Log out</button>';
       document.getElementById('logoutBtn').addEventListener('click', function(){
         try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem(STORAGE_NAME); } catch (e) { /* ignore */ }
-        window.location.href = 'torn-travel.html';
+        window.location.href = 'index.html';
       });
       return true;
     }
