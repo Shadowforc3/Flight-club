@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flight Planner — Torn Travel Assistant</title>
+<title>Flight Planner — Phantom Airway </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -231,7 +231,7 @@
 
 <header class="site">
   <div class="wrap site-row">
-    <a href="index.html" class="wordmark">TORN TRAVEL <span class="tag">flight planner</span></a>
+    <a href="index.html" class="wordmark">PHANTOM AIRWAY <span class="tag">flight planner</span></a>
     <div id="headerAuth"></div>
   </div>
 </header>
@@ -247,13 +247,13 @@
     <div class="gate" id="gate">
       <div class="kicker">FLIGHT PLANNER</div>
       <h1>Log in to plan a run</h1>
-      <p>The flight planner checks live sell prices with your Torn API key, so you need to be logged in on the main page first.</p>
+      <p>The flight planner checks live sell prices, so you need to be logged in on the main page first.</p>
       <a href="index.html?login=1" class="btn btn-primary">Go to login</a>
     </div>
 
     <div id="planner" hidden>
-      <h1 class="page-title">Best run right now</h1>
-      <p class="page-sub">Live overseas stock from YATA and Prometheus Bot, cross-checked against Torn's item market.</p>
+      <h1 class="page-title">Best trip right now</h1>
+      <p class="page-sub">Live overseas stock, prices cross-checked against Torn's item market.</p>
 
       <div class="plan-settings">
 
@@ -297,7 +297,7 @@
             </div>
           </div>
           <div class="psetting">
-            <span class="label">Cash budget</span>
+            <span class="label"> Max Cash</span>
             <input type="number" id="cashBudget" class="num-input wide" min="0" step="1000000" value="50000000">
           </div>
           <div class="psetting switch-block">
@@ -326,7 +326,7 @@
         </div>
 
         <div class="plan-row plan-row-actions">
-          <button type="button" class="btn btn-primary" id="refreshBtn">Build plan</button>
+          <button type="button" class="btn btn-primary" id="refreshBtn">Build flight plan</button>
           <span class="status-line" id="statusLine"></span>
         </div>
       </div>
@@ -340,7 +340,7 @@
           <thead>
             <tr>
               <th>Country</th><th>Item</th><th>Stock</th><th>Buy</th><th>Sell (avg)</th>
-              <th>Profit/item</th><th>Profit/min</th><th>Run cost</th>
+              <th>Profit/item</th><th>Profit/min</th><th>Trip cost</th>
             </tr>
           </thead>
           <tbody id="resultsBody"></tbody>
@@ -351,11 +351,6 @@
   </div>
 </main>
 
-<footer>
-  <div class="wrap">
-    <p>Stock data from <a href="https://yata.yt/" target="_blank" rel="noopener">YATA</a> and Prometheus Bot. Sell prices from Torn's own item market. This is an independent, fan-made tool and isn't made or endorsed by Torn's developers.</p>
-  </div>
-</footer>
 
 <script src="torn-core.js"></script>
 <script src="flight-planner.js"></script>
